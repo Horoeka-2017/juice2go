@@ -14,13 +14,7 @@ router.get('/', function(req, res) {
 // })
 
 router.get('/orders/new', function(req, res) {
-    db.get(req.app.get('connection'))
-    .then(function (orders/new){
-        res.send('new', { 'orders': 'Hello World!' })
-    })
-    .catch(function(err){
-        res.status(500).send('DATBASE ERROR: ' + err.message)
-    })
+    res.render('orders/new')
 })
 
 // router.post('/orders/new', function(req, res) {
