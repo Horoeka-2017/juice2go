@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/dev-academy-challenges/boilerplate-phase1#readme",
   "devDependencies": {
-    "nodemon": "^1.10.0",
+    "nodemon": "^1.11.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.0"
   },

@@ -12,9 +12,17 @@ router.get('/', function(req, res) {
 // router.get('/order-fulfil/:id', function(req, res) {
 //     res.render('index', { hi: 'Hello World!' })
 // })
-// router.get('/orders/new', function(req, res) {
-//     res.render('index', { hi: 'Hello World!' })
-// })
+
+router.get('/orders/new', function(req, res) {
+    db.get(req.app.get('connection'))
+    .then(function (orders/new){
+        res.send('new', { 'orders': 'Hello World!' })
+    })
+    .catch(function(err){
+        res.status(500).send('DATBASE ERROR: ' + err.message)
+    })
+})
+
 // router.post('/orders/new', function(req, res) {
 //     res.render('index', { hi: 'Hello World!' })
 // })
