@@ -12,9 +12,11 @@ router.get('/', function(req, res) {
 // router.get('/order-fulfil/:id', function(req, res) {
 //     res.render('index', { hi: 'Hello World!' })
 // })
-// router.get('/orders/new', function(req, res) {
-//     res.render('index', { hi: 'Hello World!' })
-// })
+
+router.get('/orders/new', function(req, res) {
+    res.render('orders/new')
+})
+
 // router.post('/orders/new', function(req, res) {
 //     res.render('index', { hi: 'Hello World!' })
 // })
