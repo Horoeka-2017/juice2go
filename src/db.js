@@ -5,7 +5,7 @@ module.exports = {
 }
 
 
-const config = require('./knexfile').development
+const config = require('../knexfile').development
 
 const knex = require('knex')
 const conn = knex(config)
@@ -24,5 +24,5 @@ function getOrder(id, connection) {
 }
 
 function getOrders() {
-  return conn('orders').select()
+    return conn('orders').select()
 }
