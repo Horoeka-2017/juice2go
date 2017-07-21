@@ -22,8 +22,8 @@ router.get('/orders', function(req, res) {
     //     res.render('index', { hi: 'Hello World!' })
     // })
 router.get('/orders/:id', function(req, res) {
-    const id = req.params.id
-    db.getOrder(id, (req.app.get('connection')))
+    const id = Number(req.params.id)
+    db.getOrder(id)
         .then(function(orderinfo) {
             res.render('orders/view', { orderinfo: orderinfo })
             console.log(orderinfo)

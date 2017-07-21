@@ -1,6 +1,6 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('order_items', function(table) {
-        table.increment('id')
+        table.increments('id')
         table.integer('order_id').references('orders.id')
         table.string('type')
         table.integer('quantity')

@@ -19,7 +19,7 @@ function getUser(id, connection) {
 }
 
 function getOrder(id, connection) {
-    return conn('orders').where('id', id)
+    return conn('orders').select('id', id)
 
 }
 
