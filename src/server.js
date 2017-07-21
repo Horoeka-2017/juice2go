@@ -10,7 +10,7 @@ app.engine('hbs', hbs())
 app.set('view engine', 'hbs')
 app.set('views', path.join(__dirname, '..', 'views'))
 app.use(bodyParser.urlencoded({ extended: true }))
-
+app.use(express.static(path.join(__dirname, '..', 'public')))
 app.use('/', routes)
 
 module.exports = (connection) => {
