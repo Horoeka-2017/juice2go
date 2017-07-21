@@ -4,9 +4,11 @@
   "description": "Boilerplate for Phase 1 EDA",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index",
-    "test": "tape 'tests/**/*.test.js' | tap-spec",
-    "debug": "nodemon --debug"
+    "knex": "knex",
+    "dev": "nodemon index",
+    "start": "node index",
+    "debug": "node --inspect --debug-brk index.js",
+    "test": "ava"
   },
   "repository": {
     "type": "git",
@@ -23,14 +25,18 @@
   },
   "homepage": "https://github.com/dev-academy-challenges/boilerplate-phase1#readme",
   "devDependencies": {
-    "nodemon": "^1.10.0",
-    "tap-spec": "^4.1.1",
-    "tape": "^4.6.0"
+    "ava": "^0.18.0",
+    "cheerio": "^0.22.0",
+    "faker": "^4.1.0",
+    "nodemon": "^1.11.0",
+    "sqlite3": "^3.1.8",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
-    "knex": "^0.13.0"
+    "knex": "^0.12.6",
+    "uuid": "^3.1.0"
   }
 }
