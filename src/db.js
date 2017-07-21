@@ -1,7 +1,8 @@
 module.exports = {
     getUser: getUser,
     getUsers: getUsers,
-    getOrder: getOrder
+    getOrder: getOrder,
+    getOrders: getOrders
 }
 
 
