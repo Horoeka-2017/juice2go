@@ -1,6 +1,6 @@
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('order_items', function(table) {
-        table.increments('id')
+        table.increment('id')
         table.integer('order_id').references('orders.id')
         table.string('type')
         table.integer('quantity')
@@ -9,4 +9,4 @@ exports.up = function(knex, Promise) {
 }
 exports.down = function(knex, Promise) {
     return nex.schema.dropTable('order_items')
-};
+}
