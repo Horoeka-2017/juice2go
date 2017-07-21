@@ -19,9 +19,5 @@ function getUser(id, connection) {
 }
 
 function getOrder(id, connection) {
-<<<<<<< HEAD
     return conn('orders').where('id', id)
-=======
-    return connection('orders').where('id', id)
->>>>>>> seeds
 }
