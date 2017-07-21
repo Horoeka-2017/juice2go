@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>View Order: {{id}}</title>
+  <title>Document</title>
 </head>
-
 <body>
-  Order Number: {{id}} Name: {{name}} Address:{{address}} Email:{{email}} Order:{{order-items}} //will need join
+  {{body}}
 </body>
-
 </html>
-{{!--//next we can put inot table //style page--}}
