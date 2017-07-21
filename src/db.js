@@ -38,4 +38,5 @@ function getOrder(id, connection) {
 
 function getOrders() {
     return conn('orders').select()
+        .join('order_items', 'order_items.order_id', '=', 'orders.id')
 }

@@ -9,7 +9,13 @@
 </head>
 
 <body>
-  Order Number: {{id}} Name: {{name}} Address:{{address}} Email:{{email}} Order:{{order-items}} //will need join
+  {{#each orders}}
+  Order Number: {{id}} Name: {{name}} Address:{{address}} Email:{{email}}
+  </br>
+  Order: {{type}} {{quantity}} {{size}} 
+  </br>
+  </br>
+  {{/each}}
 </body>
 
 </html>
