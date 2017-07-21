@@ -1,7 +1,9 @@
 module.exports = {
     getUser: getUser,
     getUsers: getUsers,
-    getOrder: getOrder
+    getOrder: getOrder,
+    addItemInfo: addItemInfo,
+    addOrderInfo: addOrderInfo
 }
 
 
@@ -15,18 +17,17 @@ function getUsers(connection) {
 }
 
 function getUser(id, connection) {
-    return connection('users').where('id', id)
+    return conn('users').where('id', id)
 }
 
 function addOrderInfo(info, connection) {
-    return connection('orders')
+    return conn('orders')
         .insert(info)
 }
 
 function addItemInfo(info, connection) {
-    return connection('order_items')
+    return conn('order_items')
         .insert(info)
-    return conn('users').where('id', id)
 }
 
 function getOrder(id, connection) {

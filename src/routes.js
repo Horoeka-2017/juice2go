@@ -14,7 +14,7 @@ router.get('/', function (req, res) {
 // })
 
 router.get('/orders/new', function (req, res) {
-    res.render('orders/new', {})
+    res.render('orders/new')
 })
 
 // router.post('/orders/new', function(req, res) {
@@ -37,11 +37,11 @@ router.post('/orders/new', function (req, res, next) {
                 order_id: foo[0]
             }
 
-            var addItems = db.addItemInfo(itemfields, req.app.get('connection'))
+            db.addItemInfo(itemFields, req.app.get('connection'))
                 .then(function () {
                     var message = { message: 'Your order has been placed successfully! Huzzah!' }
-                    res.redirect('orders/:id')
-                })
+                    res.redirect('/orders/new')
+                }, next)
         })
 })
 // router.get('/orders/:id', function(req, res) {
