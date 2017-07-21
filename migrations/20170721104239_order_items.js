@@ -8,5 +8,5 @@ exports.up = function(knex, Promise) {
     })
 }
 exports.down = function(knex, Promise) {
-    return nex.schema.dropTable('order_items')
+    return knex.schema.dropTable('order_items')
 }

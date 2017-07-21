@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> develop
 exports.seed = function(knex, Promise) {
     // Deletes ALL existing entries
     return knex('order_items').del()
@@ -12,4 +16,8 @@ exports.seed = function(knex, Promise) {
                 { id: 6, type: 'Virgin on the Beach', quantity: 1, size: 'large', order_id: 3 },
             ]);
         });
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> develop
