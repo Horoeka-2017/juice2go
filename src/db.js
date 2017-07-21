@@ -32,7 +32,8 @@ function addItemInfo(info, connection) {
 }
 
 function getOrder(id, connection) {
-    return conn('orders').select('id', id)
+    return conn('orders').where('orders.id', id)
+        .join('order_items', 'order_items.order_id', '=', 'orders.id')
 
 }
 

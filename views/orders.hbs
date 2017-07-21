@@ -10,7 +10,7 @@
 
 <body>
   {{#each orders}}
-  Order Number: {{id}} Name: {{name}} Address:{{address}} Email:{{email}}
+  <a href='/orders/{{id}}'> Order Number: {{id}} </a>Name: {{name}} Address:{{address}} Email:{{email}}
   </br>
   Order: {{type}} {{quantity}} {{size}} 
   </br>

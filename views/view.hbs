@@ -9,10 +9,13 @@
 </head>
 
 <body>
-  {{#each orders}}
-  Order Number: {{id}} Name: {{name}} Address:{{address}} Email:{{email}} Order:{{order-items}} 
+  {{#each order}}
+  Order Number: {{id}} </a>Name: {{name}} Address:{{address}} Email:{{email}}
+  </br>
+  Order: {{type}} {{quantity}} {{size}} 
+  </br>
+  </br>
   {{/each}}
 </body>
 
 </html>
-{{!--//next we can put inot table //style page--}}
