@@ -24,9 +24,9 @@ router.get('/orders/new', function(req, res) {
 router.get('/orders/:id', function(req, res) {
     const id = Number(req.params.id)
     db.getOrder(id)
-        .then(function(orderinfo) {
-            res.render('orders/view', { orderinfo: orderinfo })
-            console.log(orderinfo)
+        .then(function(order) {
+            res.render('orders/view', { orderinfo: order })
+            console.log(order)
         })
         .catch(function(err) {
             res.status(500).send('Database Error', err.message)
