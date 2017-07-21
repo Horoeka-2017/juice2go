@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
         table.string('name')
         table.string('address')
         table.string('email')
-        table.timestamp('created at')
+        table.dateTime('created_at')
         table.boolean('delivery')
         table.string('status')
     })
