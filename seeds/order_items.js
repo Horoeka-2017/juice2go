@@ -12,7 +12,4 @@ exports.seed = function(knex, Promise) {
                 { id: 6, type: 'Virgin on the Beach', quantity: 1, size: 'large', order_id: 3 }
             ]);
         });
-<<<<<<< HEAD
-=======
 };
->>>>>>> f8a9c8c2153f9138ecee1c250c4974f790aff16a
