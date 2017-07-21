@@ -15,18 +15,18 @@ router.get('/orders', function(req, res) {
     // router.get('/order-fulfil/:id', function(req, res) {
     //     res.render('index', { hi: 'Hello World!' })
     // })
-    // router.get('/orders/new', function(req, res) {
-    //     res.render('index', { hi: 'Hello World!' })
-    // })
+router.get('/orders/new', function(req, res) {
+        res.render('orders/new', {})
+    })
     // router.post('/orders/new', function(req, res) {
     //     res.render('index', { hi: 'Hello World!' })
     // })
 router.get('/orders/:id', function(req, res) {
-    const id = req.params.id
-    db.getOrder(id, (req.app.get('connection')))
-        .then(function(orderinfo) {
-            res.render('orders/view', { orderinfo: orderinfo })
-            console.log(orderinfo)
+    const id = Number(req.params.id)
+    db.getOrder(id)
+        .then(function(order) {
+            res.render('orders/view', { orderinfo: order })
+            console.log(order)
         })
         .catch(function(err) {
             res.status(500).send('Database Error', err.message)
