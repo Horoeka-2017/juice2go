@@ -22,3 +22,7 @@ function getOrder(id, connection) {
     return conn('orders').where('id', id)
 
 }
+
+function getOrders() {
+  return conn('orders').select()
+}

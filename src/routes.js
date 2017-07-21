@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 
 router.get('/orders', function(req, res) {
   db.getOrders(req.app.get('connection'))
-.then(function (orders) {
+    .then((orders) => {
     res.render('orders', { orders : orders })
 })
 }
