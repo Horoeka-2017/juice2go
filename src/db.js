@@ -5,7 +5,7 @@ module.exports = {
 }
 
 
-const config = require('./knexfile').development
+const config = require('../knexfile').development
 
 const knex = require('knex')
 const conn = knex(config)
