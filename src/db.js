@@ -4,14 +4,20 @@ module.exports = {
     getOrder: getOrder
 }
 
+
+const config = require('./knexfile').development
+
+const knex = require('knex')
+const conn = knex(config)
+
 function getUsers(connection) {
-    return connection('users').select()
+    return conn('users').select()
 }
 
 function getUser(id, connection) {
-    return connection('users').where('id', id)
+    return conn('users').where('id', id)
 }
 
 function getOrder(id, connection) {
-    return connection('orders').where('id', id)
+    return conn('orders').where('id', id)
 }
